@@ -1,0 +1,121 @@
+
+h1{
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.container
+{
+    display: inline-flex;
+    width: 1250px;
+    height:600px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(acxinglkobs91\ \(1\).jpg);
+    object-fit: cover;
+
+
+}
+.box{
+    display: inline;
+    width: 380px;
+    height:270px;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: 1s;
+    background-color: green;
+    
+    
+}
+.box img{
+    width:350px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+.box p{
+    margin-left: 20px;
+    font-size: medium;
+    margin-bottom: 10px;
+    color: white;
+    
+}
+
+.tin{
+    display: inline;
+    width: 380px;
+    height:270px;
+    border-radius: 12px;
+    background-color: green;
+    margin-left: 30px;
+    margin-top: 20px;
+    transition: 1s;
+    
+}
+.tin img{
+    width: 350px;
+    height:200px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.tin p{
+    margin-left: 20px;
+    font-size: medium;
+    margin-bottom: 10px;
+    color: white;
+}
+.can{
+    display: inline;
+    width: 380px;
+    height:270px;
+    border-radius: 12px;
+    background-color: green;
+    margin-left: 30px;
+    margin-top: 20px;
+    transition: 1s;
+    
+}
+.can img{
+    width: 350px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.can p{
+    margin-left: 20px;
+    font-size: medium;
+    margin-bottom: 10px;
+    color: white;
+}
+.box:hover{
+    transform:scale(1.3);
+    z-index: initial;
+   }
+
+.tin:hover{
+    transform:scale(1.3);
+    z-index: initial;
+   }
+
+.can:hover{
+    transform:scale(1.3);
+    z-index: initial;
+   }
+
+.footer{
+    background-color:#333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

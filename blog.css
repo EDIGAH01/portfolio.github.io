@@ -1,0 +1,132 @@
+body {
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: black;
+}
+.h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20%;
+    color: #fff;
+    font-size: 20px;   
+}
+.div2 table tr td img {
+    height: 300px;
+    width: 300px;
+    border-radius: 8px;
+}
+.div1 table tr td {
+    height: 400px;
+    width: 400px;
+    padding: 10px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.one {
+    background-image: url(1-BlackAndWhite_Carrie-Bayless.jpg);
+}
+.two {
+    background-image: url(b.jpg);
+}
+.three {
+    background-image: url(240_F_689683126_4hLogbcJvxLRFvjiHBUO8o96UgqkcFRi.jpg);
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: green;
+}
+
+.tb2 {
+    border-spacing: 24px;
+    border-collapse: separate;
+    padding: 0;
+    height: auto;
+}
+.tb2 tr td {
+    width: auto;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 12px;
+    
+
+}
+.tb1 {
+    border-spacing: 40px;
+}
+
+#hiddenParagraph{
+    margin-top: 20px;
+    font-size: 24px;
+    color: gray;
+}
+#hiddenParagraph2{
+    margin-top: 20px;
+    font-size: 24px;
+    color: gray;
+}
+#hiddenParagraph3{
+    margin-top: 20px;
+    font-size: 24px;
+    color: gray;
+}
+#hiddenParagraph4{
+    margin-top: 20px;
+    font-size: 24px;
+    color: gray;
+}
+.hidden{
+    display: none;
+}
+.comment-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.comment-section input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-section button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-section button:hover {
+    background-color: green;
+}
+
+.comments {
+    display: none;
+    margin-top: 10px;
+}
+
+.comment {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+

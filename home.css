@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    position: fixed;
+    right: -10px;
+    top: 0;
+    height: 100%;
+    width: 350px;
+    background-image: url('TECHNOLOGY.jpg'); /* Path to your image */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color:whitesmoke;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: 0.3s;
+    padding: 20px;
+    z-index: 1000;
+    color: #fff;
+  }
+  .dropbtn.open{
+    right:20px;
+  }
+  .dropbtn a{
+    text-align: center;
+    color: #333;
+    display: block;
+        font-weight: bold;
+        margin-top: 15px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #012640;
+    height: 20px;
+    margin-top: 25px;
+   
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    position: left;
+    display: block;
+    left: 1.5ic;
+    font-size: x-large;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    height: auto;
+    position: absolute;
+    right: 5%;
+    font-size: medium;
+    margin-top: 1%;
+
+}
+header nav ul li a:hover {
+    color: green;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.hero .content h1 {
+    font-size: 48px;
+    margin: 0;
+
+}
+
+.hero .content h2 {
+    font-size: 36px;
+    color: green;
+    margin: 10px 0;
+}
+
+.hero .content p {
+    max-width: 400px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.hero .content .btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: #032B4A;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.hero .content .btn:hover {
+    background-color: white; 
+    color: black;
+}
+footer {
+    background-color: #012640;
+    color: white;
+    padding: 20px 0;
+    width: 100%; 
+    height: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 16px;
+}
+
+footer .footer-content {
+    text-align: center; 
+   
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: green; 
+}
+right-image-container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 5cm; 
+    right: 0;
+}
+
+.right-image-container img {
+    width: 750px; 
+    height: 600px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+
+}

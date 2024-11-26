@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+   
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">
+            <a href="index.html" style="font-weight: bold;">My Portfolio</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact_us.html">Contact us</a>
+            <a href="about us.html">About</a>
+        </div>
+    </nav>
+
+    <div class="h1">
+        <h1>HELLO</h1>
+        <h3>Welcome to our blog</h3>
+     </div>
+     
+    
+    <div class="div1">
+        <table class="tb1">
+            <tr>
+                <td class="one">
+                    <h1>Innovating Tomorrow, Today</h1>
+                    <h2>Exploring cutting-edge technologies that shape our future.</h2>
+                    
+                    <p>In a world that moves faster than ever, staying ahead of the curve is crucial. At the intersection of creativity and technology, we explore the innovations of tomorrow while shaping them into practical solutions today. Every project we undertake is a step toward creating the future, delivering cutting-edge technology that drives progress and sets new standards for what's possible.</p>
+                </td>
+                <td class="two">
+                    <h1>Where Ideas Meet Execution</h1>
+                    <h2>Transforming visionary concepts into groundbreaking tech solutions.</h2>
+                    <p>The best ideas are meaningless without the ability to bring them to life. We specialize in taking abstract concepts and turning them into tangible, effective solutions. Whether it's designing a new product, building an app, or developing a complex system, we ensure that visionary ideas are translated into impactful technology that works seamlessly in the real world.</p>
+                </td>
+                <td class="three">
+                    <h1>Tech that Powers Change</h1>
+                    <h2>Harnessing the power of innovation to redefine industries.</h2>
+                    <p>Every line of code we write is a step beyond what was previously thought possible. We constantly challenge ourselves to push the limits of what technology can do, crafting innovative solutions that break traditional boundaries. Our commitment to excellence ensures that we never stop evolving, always striving for greater efficiency, creativity, and impact in every project.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="div2">
+        <table class="tb2">
+            <tr>
+                <td>
+                    <img src="pic 4.jpg" alt="img"><br><br>
+                     <h1>Redefining the Possible in tech</h1>
+                    <h2>Unlocking the future with bold ideas and smart solutions.</h2>
+                    <button id="learnMoreBtn">Learn More</button>
+                    <p id="hiddenParagraph" class="hidden">What was once thought impossible is now within reach, thanks to the rapid advancements in technology. We're committed to redefining the boundaries of what can be achieved, from developing futuristic tools to tackling complex problems with elegant solutions. Every project is an opportunity to challenge norms, rethink assumptions, and create something extraordinary.</p>
+                </td>
+                <td>
+
+
+                    <img src="pic 1.jpg" alt="img"><br><br>
+                    <h1>Empowering Progress through Innovation"</h1>
+                    <h2> Discover how technology is paving the way for new opportunities.</h2>
+                    <button id="learnMoreBtn2">Learn More</button>
+                    <p id="hiddenParagraph2" class="hidden">Progress isn’t just about moving forward—it's about empowering people, businesses, and communities with the tools they need to succeed. Through innovative technology solutions, we equip our clients with the resources to solve real-world problems, unlock new opportunities, and drive their growth. We believe that true innovation has the power to spark long-term progress across every industry.</p>
+                </td>
+                <td>
+                    <img src="pic 2.jpg" alt="img"><br><br>
+                   
+                    <h1>"The Power of Technology, the Art of Design"
+                       </h1>
+                    <h2> Where functionality and creativity converge.</h2>
+                    
+                    <button id="learnMoreBtn3">Learn More</button>
+                    <p id="hiddenParagraph3" class="hidden">In the tech world, design is more than just aesthetics—it's about creating intuitive, seamless experiences that drive user engagement and satisfaction. By combining the power of cutting-edge technology with the art of thoughtful design, we create solutions that are not only visually striking but also deeply functional. Every design decision we make is aimed at enhancing usability, accessibility, and impact.</p>
+                </td>
+                <td>
+                    <img src="pic 3.jpg" alt="">
+                    <h1>"Building Tomorrow’s Tech Ecosystem"
+                        </h1>
+                    <h2>Cultivating the next generation of digital solutions today.</h2>
+                    <button id="learnMoreBtn4">Learn More</button>
+                    <p id="hiddenParagraph4" class="hidden">The technology ecosystem is constantly evolving, and we are committed to building the frameworks that will power the future. Whether through sustainable development practices or innovative software architecture, we focus on creating scalable, flexible systems that can grow alongside emerging technologies. By building tomorrow's tech ecosystems today, we ensure that they are robust, adaptable, and future-proof.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content">
+        <h1>Comments</h1>
+        <p>Leave a comment below</p>
+    </div>
+
+    <div class="comment-section">
+        <input type="text" id="comment-input" placeholder="Add a comment...">
+        <br>
+        <button id="submit-comment">Submit</button>
+        <div id="comments" class="comments"></div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Our Team All Rights Reserved. <br>
+            Contact us: contact@ourteam.com <br>
+            facebook twitter linkedin
+        </p>
+    </footer>
+    
+    <script>
+        // Toggle menu for mobile view
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+    <script>
+        const submitBtn = document.getElementById("submit-comment");
+        const commentsDiv = document.getElementById("comments");
+        const commentInput = document.getElementById("comment-input");
+
+        submitBtn.addEventListener("click", () => {
+            const commentText = commentInput.value;
+            if (commentText.trim() !== "") {
+                const newComment = document.createElement("div");
+                newComment.classList.add("comment");
+                newComment.textContent = commentText;
+                commentsDiv.appendChild(newComment);
+                commentInput.value = ""; // Clear input
+                commentsDiv.style.display = "block"; // Show comments section
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+    <script>
+
+        document.getElementById('learnMoreBtn').addEventListener('click' , function(){
+            const paragraph = document.getElementById('hiddenParagraph');
+            if (paragraph.classList.contains('hidden')){
+                paragraph.classList.remove('hidden');
+            }else{
+                paragraph.classList.add('hidden');
+            }
+        });
+    </script>
+     <script>
+
+        document.getElementById('learnMoreBtn2').addEventListener('click' , function(){
+            const paragraph = document.getElementById('hiddenParagraph2');
+            if (paragraph.classList.contains('hidden')){
+                paragraph.classList.remove('hidden');
+            }else{
+                paragraph.classList.add('hidden');
+            }
+        });
+    </script>
+
+<script>
+
+    document.getElementById('learnMoreBtn3').addEventListener('click' , function(){
+        const paragraph = document.getElementById('hiddenParagraph3');
+        if (paragraph.classList.contains('hidden')){
+            paragraph.classList.remove('hidden');
+        }else{
+            paragraph.classList.add('hidden');
+        }
+    });
+</script>
+
+<script>
+
+    document.getElementById('learnMoreBtn4').addEventListener('click' , function(){
+        const paragraph = document.getElementById('hiddenParagraph4');
+        if (paragraph.classList.contains('hidden')){
+            paragraph.classList.remove('hidden');
+        }else{
+            paragraph.classList.add('hidden');
+        }
+    });
+</script>
+</body>
+</html>

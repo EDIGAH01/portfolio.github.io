@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberTech Portfolio</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mixitup/dist/mixitup.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="home.js"></script>
+  <style>
+    /* Basic Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .dropdown {
+      background-color: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    .dropdown:hover{
+      color: #007BFF;
+    }
+
+    /* Sidebar Styling (On the Right) */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      background-image: url("TECHNOLOGY.jpg");
+      color: #fff;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+      color: #fff;
+      border-bottom: 1px solid #444;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
+    }
+
+    .close-btn {
+      font-size: 24px;
+      padding: 10px;
+      text-align: right;
+      cursor: pointer;
+      color: #fff;
+      display: block;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+  .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #007BFF; /* Change to your desired hover color */
+  }
+  .social-icons img {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    color: #007BFF;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px; /* Space inside the footer */
+    text-align: center;
+  }
+
+  /* Add margin below the footer */
+  .footer-container {
+    margin-bottom: 20px; /* Adjust the value for more or less space */
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo"><a href="index.html"> CyberTech</a></div>
+      <button class="dropdown" id="menuToggle">Menu</button>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <span class="close-btn" id="closeSidebar">&times;</span>
+    <a href="index.html" target="_self">Home</a>
+    <a href="about us.html" target="_parent">About Us</a>
+    <a href="blog.html" target="_parent">Blog</a>
+    <a href="portfolio.html" target="_parent">Portfolio</a>
+    <a href="contact_us.html" target="_parent">Contact us</a>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+    <section class="hero">
+      <div class="content">
+        <h1>WE ARE LEADING IN</h1>
+        <h2>
+          <span id="typed"></span>
+        </h2>
+        <p>
+          We work to make a better web; one that is fast, easy to use, beautiful, accessible to all, and frustration-free. 
+          Regardless of your specific business requirements.
+        </p>
+        <a href="#contact" class="btn">Hire us</a>
+      </div>
+      <div>
+        <section class="right-image-container">
+          <img src="victor.png" alt="SUCCESS">
+        </section>
+      </div> 
+    </section>
+    <section id="portfolio" class="mixitup">
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p style = "font-size: 12px; padding-top: 15px;">&copy; 2024 CyberTech. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <i class="fab fa-linkedin-in"></i> <!-- LinkedIn Icon -->
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    closeSidebar.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    new Typed("#typed", {
+      strings: ["Web Development", "Cybersecurity", "Technology Solutions", "Innovation"],
+      typeSpeed: 50,    // Speed of typing
+      backSpeed: 30,    // Speed of backspacing
+      loop: true        // Loop the animation
+    });
+  });
+  </script>
+</body>
+</html>

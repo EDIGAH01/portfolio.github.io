@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body style="background-color: white;">
+    <nav class="navbar">
+        <div class="brand">
+            <a href="index.html" style="font-weight: bold;">My Portfolio</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact_us.html">Contact us</a>
+            <a href="about us.html">About</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
+
+    <h1>OUR SERVICES</h1>
+
+    <section>
+
+        <div class="container">
+
+            <div class="box">
+                    
+                    <img src="mobile-application-development-guidelines-riseuplabs (1).jpg">
+                    <p>Android development is one of
+                    our stronghold.<br>Book our <a href="#contacts">services</a>...</p>
+            </div>
+
+            <div class="tin">
+
+                    <img src="Title-Image-4_80465274aebb5.jpg">
+                    <p>Indulge us in design works and we shall deliver.<br>
+                        Book our <a href="#contacts">services</a>...</p>
+
+            </div>
+
+            <div class="can">
+
+                <img src="best-web-development-languages (1).webp">
+                <p>Developing can be really a hectic job.The <br>
+                solution is only a call away...Book our
+                 <a href="#contacts">services</a>...</p>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Our Team All Rights Reserved. <br>
+            Contact us: contact@ourteam.com <br>
+            facebook twitter linkedin
+        </p>
+    </footer>
+    <script>
+        // Toggle menu for mobile view
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
